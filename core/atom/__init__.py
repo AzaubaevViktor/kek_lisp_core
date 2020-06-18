@@ -4,3 +4,7 @@ class Atom:
 
 class AtomStr:
     pass
+
+
+class AtomTuple:
+    pass

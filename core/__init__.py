@@ -6,3 +6,4 @@ from .atom import Atom, AtomStr
 from .lexer import Lexer, LexerKekException
 
 from .namespace import NameSpace
+from .executor import Executor
