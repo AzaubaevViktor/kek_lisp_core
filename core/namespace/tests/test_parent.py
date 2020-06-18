@@ -42,4 +42,4 @@ def test_deep(count, creator):
     ns['x'] = -1
 
     assert ns['x'] == -1
-    assert 'x' not in ns
+    assert 'x' not in root
