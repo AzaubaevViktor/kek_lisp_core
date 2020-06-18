@@ -21,13 +21,19 @@ def test_parent():
 
 
 @pytest.mark.parametrize('count', (10, ))
-def test_deep(count):
+@pytest.mark.parametrize(
+    'creator',
+    (
+        lambda d, ns: NameSpace(d, parent=ns),
+        lambda d, ns: ns.child(d)
+    ))
+def test_deep(count, creator):
     assert count > 2
 
     ns = root = NameSpace({'0': 0})
 
     for i in range(1, count):
-        ns = NameSpace({str(i): i}, parent=ns)
+        ns = creator({str(i): i}, ns)
 
     for i in range(count):
         assert str(i) in ns
