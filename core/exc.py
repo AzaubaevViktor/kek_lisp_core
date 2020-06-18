@@ -1,0 +1,2 @@
+class BaseKekException(Exception):
+    pass
