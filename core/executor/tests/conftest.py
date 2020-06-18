@@ -12,6 +12,7 @@ def ex() -> Callable[[str], Any]:
         'quote': None,
         'int': None,
         '+': None,
+        '=': None,
     })
 
     executor = Executor(ns)
