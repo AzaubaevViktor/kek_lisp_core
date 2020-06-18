@@ -5,6 +5,7 @@ from core import NameSpace, SourceStr, Lexer, Executor
 
 def ex() -> Callable[[str], Any]:
     # TODO: Create methods
+    # TODO: Add test stack (append lemma + value, return list of)
 
     ns = NameSpace({
         'test_int': 456,
