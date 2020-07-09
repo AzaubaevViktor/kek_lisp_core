@@ -1,0 +1,5 @@
+(= f (open "input.txt" "rt"))
+(= data (read f))
+(assert (> (len data) 0))
+(assert (== (len data) 14))
+(assert (== (.item data 0) "H"))
